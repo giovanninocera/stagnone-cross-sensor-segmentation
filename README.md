@@ -1,6 +1,7 @@
 # Stagnone cross-sensor submerged-vegetation segmentation
 
 [![Release verification](https://github.com/giovanninocera/stagnone-cross-sensor-segmentation/actions/workflows/verify.yml/badge.svg)](https://github.com/giovanninocera/stagnone-cross-sensor-segmentation/actions/workflows/verify.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23059738.svg)](https://doi.org/10.5281/zenodo.23059738)
 
 Code, frozen configurations, aggregate results, and provenance records supporting the manuscript **“Cross-Sensor Segmentation of Optically Detectable Submerged Vegetation under Acquisition Heterogeneity”**.
 
@@ -67,7 +68,7 @@ Source code is licensed under the MIT License. Aggregate tables, documentation, 
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). A version-specific Zenodo DOI will be added after the GitHub release is archived.
+Version 1.0.0 is archived in Zenodo at [doi:10.5281/zenodo.23059738](https://doi.org/10.5281/zenodo.23059738). Citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
 ## Authors
 

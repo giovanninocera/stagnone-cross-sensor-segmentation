@@ -5,6 +5,7 @@ title: "Stagnone cross-sensor submerged-vegetation segmentation"
 version: "1.0.0"
 date-released: "2026-09-30"
 repository-code: "https://github.com/giovanninocera/stagnone-cross-sensor-segmentation"
+doi: "10.5281/zenodo.23059738"
 license: MIT
 authors:
   - family-names: Nocera
