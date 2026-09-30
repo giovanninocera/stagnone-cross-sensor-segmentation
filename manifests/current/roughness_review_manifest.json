@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-16T19:17:13",
+  "status": "diagnostic only; excluded from paper-facing structural maps; not a calibrated hydraulic coefficient",
+  "paper_facing": false,
+  "paper_facing_layers": [
+    "five-seed mean P(VEG)",
+    "selected structural footprint IDs"
+  ],
+  "continuous_rule": "diagnostic-only composite: five-seed mean P(VEG) outside mapped or selected footprints; footprint pixels equal 1.0",
+  "rings": {
+    "excluded_immediate_edge_m": [
+      0,
+      4
+    ],
+    "inner_context_m": [
+      4,
+      12
+    ],
+    "outer_context_m": [
+      12,
+      24
+    ],
+    "core_pixels_excluded_from_rings": true
+  },
+  "continuous_summary": [
+    {
+      "year": 2003,
+      "valid_pixels": 8615906,
+      "structural_pixels_at_1": 191351,
+      "structural_area_ha": 76.5404,
+      "mean_index": 0.670007
+    },
+    {
+      "year": 2023,
+      "valid_pixels": 8615883,
+      "structural_pixels_at_1": 122364,
+      "structural_area_ha": 48.9456,
+      "mean_index": 0.56477
+    }
+  ],
+  "source_summary": {
+    "path": "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/hybrid_summary.json",
+    "sha256": "b40a7d3915b13701a6687aa45329dec31ce57eb4f1de544ed040d6abf4909bf6"
+  },
+  "local_outputs": {
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/diagnostic_core_ring_review_zones.tif": {
+      "sha256": "8a0940b9022b12f04fbd773c7263f9ecea042f682c12b15b0acff64adb34820e",
+      "bytes": 148631
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/ring_excluded_0_4m.tif": {
+      "sha256": "2e721fef1a4a85b492341c1f82beec89cd51b57c314af3badb2e28ad4322d616",
+      "bytes": 97101
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/ring_inner_4_12m.tif": {
+      "sha256": "93a9cc853779e426aba5580c65fb5bba8447e82cd97a5dfca81efd523f0c07b8",
+      "bytes": 105185
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/ring_outer_12_24m.tif": {
+      "sha256": "434945dd3861bf54f530678660980e8e920b26c496b8e0fd6505fe6bd1cc25e2",
+      "bytes": 97761
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/diagnostic_pveg_structural_composite_2003.tif": {
+      "sha256": "5c54e5ad9a02a176a4870a328b14ee8f905c3a731291601f0995539952cbdcd5",
+      "bytes": 24068038
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/diagnostic_pveg_structural_composite_2023.tif": {
+      "sha256": "50a1908d610653c86f403b05a442d06686fae37dd364d0e0ada0fbb82ffe6500",
+      "bytes": 23903454
+    }
+  }
+}

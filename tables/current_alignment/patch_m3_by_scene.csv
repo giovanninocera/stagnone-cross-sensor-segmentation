@@ -1,0 +1,4 @@
+scene_id,scene,train_patches,validation_patches,test_patches,total_patches
+20030709_qb,2003 QuickBird,1078,337,585,2000
+20160825_wv,2016 WorldView-2,1084,329,587,2000
+20230812_pl,2023 Pleiades,1078,335,587,2000

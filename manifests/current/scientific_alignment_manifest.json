@@ -1,0 +1,948 @@
+{
+  "status": "PASS",
+  "scope": "non-structural scientific alignment v3",
+  "patch_and_support": {
+    "branches": [
+      {
+        "branch": "M1_03",
+        "branch_label": "M1-2003",
+        "training_scenes": "2003",
+        "total_patches": 6000,
+        "train_patches": 3234,
+        "validation_patches": 1010,
+        "test_patches": 1756,
+        "patches_per_included_scene": "2003:6000",
+        "csv_sha256": "891a2d60f7bb719f529769f75c8ff6245d4c34f9ef5977fbc816b20351574469"
+      },
+      {
+        "branch": "M1_16",
+        "branch_label": "M1-2016",
+        "training_scenes": "2016",
+        "total_patches": 6000,
+        "train_patches": 3248,
+        "validation_patches": 1003,
+        "test_patches": 1749,
+        "patches_per_included_scene": "2016:6000",
+        "csv_sha256": "8fb23d4214e1163aabab140742a538f800be4840f1059ddfb470c3629301ce02"
+      },
+      {
+        "branch": "M1_23",
+        "branch_label": "M1-2023",
+        "training_scenes": "2023",
+        "total_patches": 6000,
+        "train_patches": 3238,
+        "validation_patches": 1004,
+        "test_patches": 1758,
+        "patches_per_included_scene": "2023:6000",
+        "csv_sha256": "3d2e2f20f87a3e64352a4ac2284d54b8bcd0b21cd0dec3dc43490ec226a97d18"
+      },
+      {
+        "branch": "M2_0316",
+        "branch_label": "M2-2003/2016",
+        "training_scenes": "2003+2016",
+        "total_patches": 6000,
+        "train_patches": 3194,
+        "validation_patches": 1066,
+        "test_patches": 1740,
+        "patches_per_included_scene": "2003:3000|2016:3000",
+        "csv_sha256": "d591bc01556dd71dcfc5e3d3562e07693bb1b3f357055a1e674f78fa60f1ef98"
+      },
+      {
+        "branch": "M2_0323",
+        "branch_label": "M2-2003/2023",
+        "training_scenes": "2003+2023",
+        "total_patches": 6000,
+        "train_patches": 3188,
+        "validation_patches": 1072,
+        "test_patches": 1740,
+        "patches_per_included_scene": "2003:3000|2023:3000",
+        "csv_sha256": "a15a18be1d69c8928a3c55da1b0b53678b53c6aec858c5cb062134328df46c28"
+      },
+      {
+        "branch": "M2_1623",
+        "branch_label": "M2-2016/2023",
+        "training_scenes": "2016+2023",
+        "total_patches": 6000,
+        "train_patches": 3190,
+        "validation_patches": 1064,
+        "test_patches": 1746,
+        "patches_per_included_scene": "2016:3000|2023:3000",
+        "csv_sha256": "489a5e1880cff81e5c341e2e2085f51d28f4ddea905a103ae0b047850764a0b3"
+      },
+      {
+        "branch": "M3_031623",
+        "branch_label": "M3-2003/2016/2023",
+        "training_scenes": "2003+2016+2023",
+        "total_patches": 6000,
+        "train_patches": 3240,
+        "validation_patches": 1001,
+        "test_patches": 1759,
+        "patches_per_included_scene": "2003:2000|2016:2000|2023:2000",
+        "csv_sha256": "aceac491f9a57c36d1be49e18b935c21fb53d2905b14ccd6b0f3e0574d86fb04"
+      }
+    ],
+    "m3_by_scene": [
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "train_patches": 1078,
+        "validation_patches": 337,
+        "test_patches": 585,
+        "total_patches": 2000
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "train_patches": 1084,
+        "validation_patches": 329,
+        "test_patches": 587,
+        "total_patches": 2000
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "train_patches": 1078,
+        "validation_patches": 335,
+        "test_patches": 587,
+        "total_patches": 2000
+      }
+    ],
+    "support": {
+      "windows_total": 207,
+      "windows_per_scene": 69,
+      "unique_pixels_total": 2005445,
+      "unique_pixels_2003": 768261,
+      "unique_pixels_2016": 541175,
+      "unique_pixels_2023": 696009,
+      "validation_blocks": "6|24|28|30",
+      "test_blocks": "15|18|19|22",
+      "reciprocal_buffer_px": 256,
+      "reciprocal_buffer_m": 512,
+      "train_validation_rows_checked": 29752,
+      "overlap_pairs": 0,
+      "manifest_sha256": "083d75e8a34f248cab639e90584196b52a9cce6bffe1c7185dc5b18dbfd3d84e"
+    }
+  },
+  "ablation": {
+    "pooled": [
+      {
+        "branch": "M3_031623",
+        "branch_label": "M3-2003/2016/2023",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.9563630921955324,
+        "min_iou_seed_sd": 0.0056666300891492,
+        "iou_veg_mean": 0.9754143341392452,
+        "iou_nonveg_mean": 0.9563630921955324,
+        "balanced_accuracy_mean": 0.9816186343420068,
+        "mcc_mean": 0.9652883311920164
+      },
+      {
+        "branch": "M2_0323",
+        "branch_label": "M2-2003/2023",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.8967736891086033,
+        "min_iou_seed_sd": 0.059045443684059,
+        "iou_veg_mean": 0.9389335049713065,
+        "iou_nonveg_mean": 0.8967736891086033,
+        "balanced_accuracy_mean": 0.9560522920512632,
+        "mcc_mean": 0.9138775974255868
+      },
+      {
+        "branch": "M1_23",
+        "branch_label": "M1-2023",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.8784589549551487,
+        "min_iou_seed_sd": 0.0066200552558444,
+        "iou_veg_mean": 0.9307424390905265,
+        "iou_nonveg_mean": 0.8784589549551487,
+        "balanced_accuracy_mean": 0.947962412782154,
+        "mcc_mean": 0.899598739681376
+      },
+      {
+        "branch": "M2_0316",
+        "branch_label": "M2-2003/2016",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.8330728712671304,
+        "min_iou_seed_sd": 0.0494670631215406,
+        "iou_veg_mean": 0.8893451731819534,
+        "iou_nonveg_mean": 0.8330728712671304,
+        "balanced_accuracy_mean": 0.9392226371683524,
+        "mcc_mean": 0.8568155000898322
+      },
+      {
+        "branch": "M2_1623",
+        "branch_label": "M2-2016/2023",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.8325156013357662,
+        "min_iou_seed_sd": 0.0171236947162285,
+        "iou_veg_mean": 0.8907308870848205,
+        "iou_nonveg_mean": 0.8325156013357662,
+        "balanced_accuracy_mean": 0.9396634980267072,
+        "mcc_mean": 0.8569016145956789
+      },
+      {
+        "branch": "M1_16",
+        "branch_label": "M1-2016",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.7779489163500084,
+        "min_iou_seed_sd": 0.019553412024919,
+        "iou_veg_mean": 0.8440024647156659,
+        "iou_nonveg_mean": 0.7779489163500084,
+        "balanced_accuracy_mean": 0.9169025797525728,
+        "mcc_mean": 0.8052985759282484
+      },
+      {
+        "branch": "M1_03",
+        "branch_label": "M1-2003",
+        "n_seeds": 5,
+        "n_unique_pixels": 2005445,
+        "min_iou_mean": 0.5037968329060203,
+        "min_iou_seed_sd": 0.0307813061311626,
+        "iou_veg_mean": 0.5714277285744289,
+        "iou_nonveg_mean": 0.5037968329060203,
+        "balanced_accuracy_mean": 0.7314983278876412,
+        "mcc_mean": 0.4475072326602517
+      }
+    ],
+    "m3_by_scene": [
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "n_unique_pixels": 768261,
+        "min_iou_mean": 0.9533195724250504,
+        "min_iou_seed_sd": 0.0178989225515473,
+        "iou_veg_mean": 0.9834475742242428,
+        "iou_nonveg_mean": 0.9533195724250504,
+        "ece_15_seed_mean": 0.015934058662582,
+        "brier_seed_mean": 0.0108108355315341
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "n_unique_pixels": 541175,
+        "min_iou_mean": 0.9403976310910775,
+        "min_iou_seed_sd": 0.0068205201852572,
+        "iou_veg_mean": 0.955483320776256,
+        "iou_nonveg_mean": 0.9403976310910775,
+        "ece_15_seed_mean": 0.0322373757362461,
+        "brier_seed_mean": 0.0224317979450527
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "n_unique_pixels": 696009,
+        "min_iou_mean": 0.971503938046334,
+        "min_iou_seed_sd": 0.0071893548474569,
+        "iou_veg_mean": 0.9796221610632316,
+        "iou_nonveg_mean": 0.971503938046334,
+        "ece_15_seed_mean": 0.0083627006768669,
+        "brier_seed_mean": 0.0087032563625509
+      }
+    ],
+    "pairwise": [
+      {
+        "comparison": "M3_031623_minus_M1_03",
+        "primary": "M3_031623",
+        "competitor": "M1_03",
+        "competitor_label": "M1-2003",
+        "delta_min_iou_mean": 0.4566714577852804,
+        "ci95_low": 0.4044058461629229,
+        "ci95_high": 0.5077168703321888,
+        "probability_delta_gt_zero": 1.0,
+        "bootstrap_draws": 5000
+      },
+      {
+        "comparison": "M3_031623_minus_M1_16",
+        "primary": "M3_031623",
+        "competitor": "M1_16",
+        "competitor_label": "M1-2016",
+        "delta_min_iou_mean": 0.1801543095714224,
+        "ci95_low": 0.1484815259470772,
+        "ci95_high": 0.2174020396704394,
+        "probability_delta_gt_zero": 1.0,
+        "bootstrap_draws": 5000
+      },
+      {
+        "comparison": "M3_031623_minus_M1_23",
+        "primary": "M3_031623",
+        "competitor": "M1_23",
+        "competitor_label": "M1-2023",
+        "delta_min_iou_mean": 0.078700893462569,
+        "ci95_low": 0.0628423600240906,
+        "ci95_high": 0.0965279177836799,
+        "probability_delta_gt_zero": 1.0,
+        "bootstrap_draws": 5000
+      },
+      {
+        "comparison": "M3_031623_minus_M2_0316",
+        "primary": "M3_031623",
+        "competitor": "M2_0316",
+        "competitor_label": "M2-2003/2016",
+        "delta_min_iou_mean": 0.12319541011388,
+        "ci95_low": 0.0700193959376868,
+        "ci95_high": 0.1787939968288334,
+        "probability_delta_gt_zero": 1.0,
+        "bootstrap_draws": 5000
+      },
+      {
+        "comparison": "M3_031623_minus_M2_0323",
+        "primary": "M3_031623",
+        "competitor": "M2_0323",
+        "competitor_label": "M2-2003/2023",
+        "delta_min_iou_mean": 0.0601567447692385,
+        "ci95_low": 0.0231662661233051,
+        "ci95_high": 0.1187406644024816,
+        "probability_delta_gt_zero": 1.0,
+        "bootstrap_draws": 5000
+      },
+      {
+        "comparison": "M3_031623_minus_M2_1623",
+        "primary": "M3_031623",
+        "competitor": "M2_1623",
+        "competitor_label": "M2-2016/2023",
+        "delta_min_iou_mean": 0.1250849551518493,
+        "ci95_low": 0.1004723250861908,
+        "ci95_high": 0.1520306298029008,
+        "probability_delta_gt_zero": 1.0,
+        "bootstrap_draws": 5000
+      }
+    ],
+    "label_holdout": [
+      {
+        "omitted_scene": "2003 QuickBird",
+        "label_holdout_branch": "M2-2016/2023",
+        "label_holdout_min_iou_mean": 0.6270151266803339,
+        "label_holdout_seed_sd": 0.0350811902902799,
+        "m3_min_iou_mean": 0.9533195724250504,
+        "m3_seed_sd": 0.0178989225515473,
+        "m3_minus_holdout_delta": 0.332935710522969,
+        "delta_ci95_low": 0.263956011863746,
+        "delta_ci95_high": 0.405540381888699,
+        "probability_delta_gt_zero": 1.0,
+        "interpretation": "labels withheld; target-scene unlabeled normalization retained"
+      },
+      {
+        "omitted_scene": "2016 WorldView-2",
+        "label_holdout_branch": "M2-2003/2023",
+        "label_holdout_min_iou_mean": 0.8165780918867718,
+        "label_holdout_seed_sd": 0.1025285471560763,
+        "m3_min_iou_mean": 0.9403976310910775,
+        "m3_seed_sd": 0.0068205201852572,
+        "m3_minus_holdout_delta": 0.1315050689719909,
+        "delta_ci95_low": 0.0580825220765458,
+        "delta_ci95_high": 0.2430358652141437,
+        "probability_delta_gt_zero": 1.0,
+        "interpretation": "labels withheld; target-scene unlabeled normalization retained"
+      },
+      {
+        "omitted_scene": "2023 Pleiades",
+        "label_holdout_branch": "M2-2003/2016",
+        "label_holdout_min_iou_mean": 0.7121173031734066,
+        "label_holdout_seed_sd": 0.0976156407925156,
+        "m3_min_iou_mean": 0.971503938046334,
+        "m3_seed_sd": 0.0071893548474569,
+        "m3_minus_holdout_delta": 0.2724241795442412,
+        "delta_ci95_low": 0.1704327470469029,
+        "delta_ci95_high": 0.3775878304056999,
+        "probability_delta_gt_zero": 1.0,
+        "interpretation": "labels withheld; target-scene unlabeled normalization retained"
+      }
+    ],
+    "summary_sha256": "6a71c8141d7b3091dac2941509ab5f30a39253b9b0cc08e360ed856f24b865de",
+    "bootstrap_sha256": "9ef59abd01116db397607d379d12c9cdb404eef9faad1fe1b8e9a6bf0163228b"
+  },
+  "calibration": {
+    "ensemble": [
+      {
+        "prediction": "five_seed_mean",
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "n_pixels": 768261,
+        "prevalence": 0.7442639936167527,
+        "mean_probability": 0.7466302657892121,
+        "ece_15": 0.01370237913186157,
+        "mce_15": 0.22566083081755564,
+        "brier": 0.007788873030110421,
+        "nll": 0.03364496493400053,
+        "spatial_cells": 36,
+        "saved_mean_max_abs_difference": 0.0,
+        "ece_15_ci95_low": 0.010165963291361697,
+        "ece_15_ci95_high": 0.020848414777289298,
+        "brier_ci95_low": 0.0041190290570067975,
+        "brier_ci95_high": 0.012727302539663924,
+        "nll_ci95_low": 0.021310119025646078,
+        "nll_ci95_high": 0.049396588589951496,
+        "mean_probability_ci95_low": 0.5956021681715656,
+        "mean_probability_ci95_high": 0.8692773574511942,
+        "prevalence_ci95_low": 0.5834699013518637,
+        "prevalence_ci95_high": 0.8748778820646956
+      },
+      {
+        "prediction": "five_seed_mean",
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "n_pixels": 541175,
+        "prevalence": 0.5622303321476417,
+        "mean_probability": 0.5919405038889233,
+        "ece_15": 0.029710171741281554,
+        "mce_15": 0.6915754364030369,
+        "brier": 0.017399185592845604,
+        "nll": 0.05825423700637041,
+        "spatial_cells": 36,
+        "saved_mean_max_abs_difference": 0.0,
+        "ece_15_ci95_low": 0.014137545636142279,
+        "ece_15_ci95_high": 0.052635048761330995,
+        "brier_ci95_low": 0.007071593333164509,
+        "brier_ci95_high": 0.03163032134080979,
+        "nll_ci95_low": 0.027657886238250922,
+        "nll_ci95_high": 0.10037020208268055,
+        "mean_probability_ci95_low": 0.419626841239075,
+        "mean_probability_ci95_high": 0.7523533021640837,
+        "prevalence_ci95_low": 0.3857286155063832,
+        "prevalence_ci95_high": 0.7287922975234591
+      },
+      {
+        "prediction": "five_seed_mean",
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "n_pixels": 696009,
+        "prevalence": 0.5862725913026987,
+        "mean_probability": 0.5875450363615359,
+        "ece_15": 0.004796265915690306,
+        "mce_15": 0.09684238791159047,
+        "brier": 0.005540459173894132,
+        "nll": 0.024229383639859433,
+        "spatial_cells": 36,
+        "saved_mean_max_abs_difference": 0.0,
+        "ece_15_ci95_low": 0.0037357453922968464,
+        "ece_15_ci95_high": 0.010518726616517812,
+        "brier_ci95_low": 0.0022730356937277277,
+        "brier_ci95_high": 0.01004585105059923,
+        "nll_ci95_low": 0.013529309819197687,
+        "nll_ci95_high": 0.039065510691163235,
+        "mean_probability_ci95_low": 0.4548862854087015,
+        "mean_probability_ci95_high": 0.7205935320476244,
+        "prevalence_ci95_low": 0.45282124023981324,
+        "prevalence_ci95_high": 0.7201216587759856
+      },
+      {
+        "prediction": "five_seed_mean",
+        "scene_id": "ALL_SCENES",
+        "scene": "Pooled",
+        "n_pixels": 2005445,
+        "prevalence": 0.6403092580449725,
+        "mean_probability": 0.6496747355477365,
+        "ece_15": 0.012223484341786519,
+        "mce_15": 0.2699293182403364,
+        "brier": 0.009601909349474436,
+        "nll": 0.03701807837905184,
+        "spatial_cells": 108,
+        "saved_mean_max_abs_difference": 0.0,
+        "ece_15_ci95_low": 0.007914499537713336,
+        "ece_15_ci95_high": 0.01898758425731821,
+        "brier_ci95_low": 0.0061226366692888265,
+        "brier_ci95_high": 0.013973811520681232,
+        "nll_ci95_low": 0.026350956712562296,
+        "nll_ci95_high": 0.05018333374904678,
+        "mean_probability_ci95_low": 0.5595883478692588,
+        "mean_probability_ci95_high": 0.7340859732710763,
+        "prevalence_ci95_low": 0.5465933113139259,
+        "prevalence_ci95_high": 0.7268484761000049
+      }
+    ],
+    "bootstrap": [
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "metric": "ece_15",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.010165963291361697,
+        "ci95_high": 0.020848414777289298
+      },
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "metric": "brier",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.0041190290570067975,
+        "ci95_high": 0.012727302539663924
+      },
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "metric": "nll",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.021310119025646078,
+        "ci95_high": 0.049396588589951496
+      },
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "metric": "mean_probability",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.5956021681715656,
+        "ci95_high": 0.8692773574511942
+      },
+      {
+        "scene_id": "20030709_qb",
+        "scene": "2003 QuickBird",
+        "metric": "prevalence",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.5834699013518637,
+        "ci95_high": 0.8748778820646956
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "metric": "ece_15",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.014137545636142279,
+        "ci95_high": 0.052635048761330995
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "metric": "brier",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.007071593333164509,
+        "ci95_high": 0.03163032134080979
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "metric": "nll",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.027657886238250922,
+        "ci95_high": 0.10037020208268055
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "metric": "mean_probability",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.419626841239075,
+        "ci95_high": 0.7523533021640837
+      },
+      {
+        "scene_id": "20160825_wv",
+        "scene": "2016 WorldView-2",
+        "metric": "prevalence",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.3857286155063832,
+        "ci95_high": 0.7287922975234591
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "metric": "ece_15",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.0037357453922968464,
+        "ci95_high": 0.010518726616517812
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "metric": "brier",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.0022730356937277277,
+        "ci95_high": 0.01004585105059923
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "metric": "nll",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.013529309819197687,
+        "ci95_high": 0.039065510691163235
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "metric": "mean_probability",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.4548862854087015,
+        "ci95_high": 0.7205935320476244
+      },
+      {
+        "scene_id": "20230812_pl",
+        "scene": "2023 Pleiades",
+        "metric": "prevalence",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.45282124023981324,
+        "ci95_high": 0.7201216587759856
+      },
+      {
+        "scene_id": "ALL_SCENES",
+        "scene": "Pooled",
+        "metric": "ece_15",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.007914499537713336,
+        "ci95_high": 0.01898758425731821
+      },
+      {
+        "scene_id": "ALL_SCENES",
+        "scene": "Pooled",
+        "metric": "brier",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.0061226366692888265,
+        "ci95_high": 0.013973811520681232
+      },
+      {
+        "scene_id": "ALL_SCENES",
+        "scene": "Pooled",
+        "metric": "nll",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.026350956712562296,
+        "ci95_high": 0.05018333374904678
+      },
+      {
+        "scene_id": "ALL_SCENES",
+        "scene": "Pooled",
+        "metric": "mean_probability",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.5595883478692588,
+        "ci95_high": 0.7340859732710763
+      },
+      {
+        "scene_id": "ALL_SCENES",
+        "scene": "Pooled",
+        "metric": "prevalence",
+        "bootstrap_draws": 5000,
+        "bootstrap_seed": 20260716,
+        "ci95_low": 0.5465933113139259,
+        "ci95_high": 0.7268484761000049
+      }
+    ],
+    "support_definition": "frozen unique labelled pixels from 207 class-independent held-out windows",
+    "inference_product": "mean of five validation-temperature-scaled full-scene Hann-blended probabilities",
+    "authoritative_stage_csv": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/calibration_metrics_heldout_unique_pixels.csv",
+    "authoritative_stage_csv_sha256": "47a8b3f194c99926f7484deaa99a5740525421a56ba67735c7255ca9a8fe4739",
+    "legacy_full_reference_csv": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/calibration_metrics.csv",
+    "legacy_full_reference_csv_sha256": "ed2fdaa8b263eaba0e00fa3e0045f3026be352d6589d13c3af7741feb4217dc7",
+    "support_note": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/CALIBRATION_SUPPORT_README.md",
+    "reference_paths_used": {
+      "20030709_qb": {
+        "path": "${PROJECT_ROOT}/out/training_mask/training_2003__FULL__b-2m.tif",
+        "sha256": "9f4410a05d808d09a566767c1ec13e7248de443f8d38260f19d5287b5c02cd56",
+        "valid_mask_path": "${PROJECT_ROOT}/data/features/valid_20030709_qb_st3b_final_scene_ablation_031623_v3_common.tif",
+        "valid_mask_sha256": "4d4774da802c00123a233a942228ba9d74c78a89089bb80686713d945a8360ed"
+      },
+      "20160825_wv": {
+        "path": "${PROJECT_ROOT}/out/training_mask/training_2016__FULL.tif",
+        "sha256": "70bac1fa7bd0fc8e90ff8a85d271b01c6798ca2fd411bb8d3267bf72c9b9485d",
+        "valid_mask_path": "${PROJECT_ROOT}/data/features/valid_20160825_wv_st3b_final_scene_ablation_031623_v3_common.tif",
+        "valid_mask_sha256": "32be21fc0bb6136aa2d20433b7e8408cf920c07ece2ba38f9a68d83ab3b225bc"
+      },
+      "20230812_pl": {
+        "path": "${PROJECT_ROOT}/out/training_mask/training_2023__FULL.tif",
+        "sha256": "aa8cd6c2f5d366ade398b643ff5f5c3ceb5e63166e435f32be2a936f0ab3fd3e",
+        "valid_mask_path": "${PROJECT_ROOT}/data/features/valid_20230812_pl_st3b_final_scene_ablation_031623_v3_common.tif",
+        "valid_mask_sha256": "e8b5bd79b2c9f20a27bf92c6fa99e0d253c9c1ca22f98690a3e17621708fdb8a"
+      }
+    }
+  },
+  "field": {
+    "decision": "REMOVE_FROM_INFERENTIAL_MANUSCRIPT",
+    "permitted_use": "optional descriptive supplement only; not validation, accuracy, specificity, or detectability evidence",
+    "derived_field_file": "${PROJECT_ROOT}/data/local_multiclass/field_points.geojson",
+    "derived_field_sha256": "962c98e038924285ea24b4518ec366c0b107b56e5ca0e42a5c085a0191e86377",
+    "raw_survey_archived_in_project": false,
+    "survey_date_verifiable_from_derived_file": false,
+    "n_points_2023": 54,
+    "n_field_vegetated": 47,
+    "n_field_nonvegetated": 7,
+    "true_positive": 25,
+    "false_negative": 22,
+    "true_negative": 7,
+    "false_positive": 0,
+    "exact_sensitivity": 0.5319148936170213,
+    "exact_sensitivity_wilson95_low": 0.3923238322019481,
+    "exact_sensitivity_wilson95_high": 0.6666831292343925,
+    "exact_specificity": 1.0,
+    "exact_specificity_wilson95_low": 0.6456695649333126,
+    "exact_specificity_wilson95_high": 1.0,
+    "vegetated_hits_within_one_2m_cell": 31,
+    "one_cell_tolerance_sensitivity": 0.6595744680851063,
+    "one_cell_tolerance_sensitivity_wilson95_low": 0.5167092456194193,
+    "one_cell_tolerance_sensitivity_wilson95_high": 0.7783255615622839,
+    "n_points_in_fixed_test_blocks": 4,
+    "median_nearest_neighbor_m": 27.509256086050243,
+    "minimum_nearest_neighbor_m": 11.000000001396984,
+    "field_vegetated_median_pveg": 0.8910535573959351,
+    "field_nonvegetated_median_pveg": 0.010734347626566887,
+    "reasons": [
+      "only a derived class-assigned GeoJSON is present; raw notes, protocol and date metadata are not archived",
+      "the binary mapping includes post-hoc ecological-category choices, including reef plateau as NONVEG",
+      "the sample is opportunistic, spatially clustered and contains only seven NONVEG records",
+      "the exact vegetation hit rate is low and cannot establish an optical detectability mechanism",
+      "the project validation README records unresolved disagreement between in-situ notes and post-hoc classes"
+    ]
+  },
+  "methods": {
+    "inputs": {
+      "channels": [
+        "B",
+        "G",
+        "R"
+      ],
+      "grid": "EPSG:32633, 2 m sampling grid",
+      "normalization": "per-scene 2nd-98th percentile scaling fitted on valid, label-agnostic image pixels in the union of fixed training-split windows",
+      "normalization_by_scene": {
+        "20030709_qb": {
+          "fit_pixels": 5710545,
+          "training_window_rows": 3136,
+          "fallback_to_all_valid": false,
+          "percentile_low": 2.0,
+          "percentile_high": 98.0,
+          "rgb_clip_values": {
+            "B": {
+              "lo": 0.05004444718360901,
+              "hi": 0.06288173675537109
+            },
+            "G": {
+              "lo": 0.023909512907266617,
+              "hi": 0.05385975956916815
+            },
+            "R": {
+              "lo": 0.015353966504335403,
+              "hi": 0.0385750712454319
+            }
+          }
+        },
+        "20160825_wv": {
+          "fit_pixels": 5710524,
+          "training_window_rows": 3136,
+          "fallback_to_all_valid": false,
+          "percentile_low": 2.0,
+          "percentile_high": 98.0,
+          "rgb_clip_values": {
+            "B": {
+              "lo": 0.20941947400569916,
+              "hi": 0.23768281936645508
+            },
+            "G": {
+              "lo": 0.10683518648147583,
+              "hi": 0.1478179693222046
+            },
+            "R": {
+              "lo": 0.05663628131151199,
+              "hi": 0.09287998080253601
+            }
+          }
+        },
+        "20230812_pl": {
+          "fit_pixels": 5710529,
+          "training_window_rows": 3136,
+          "fallback_to_all_valid": false,
+          "percentile_low": 2.0,
+          "percentile_high": 98.0,
+          "rgb_clip_values": {
+            "B": {
+              "lo": 0.016018107533454895,
+              "hi": 0.041638072580099106
+            },
+            "G": {
+              "lo": 0.008771264925599098,
+              "hi": 0.04533086717128754
+            },
+            "R": {
+              "lo": 0.00175531767308712,
+              "hi": 0.03988591954112053
+            }
+          }
+        }
+      },
+      "normalization_scope_caveat": "target-scene radiometry is used for label-independent normalization in scene-exclusion branches"
+    },
+    "quickbird_2003": {
+      "acquisition_date": "2003-07-07",
+      "legacy_scene_identifier": "20030709_qb",
+      "raw_source": "reflectance_rhoTOA_07072003.tif",
+      "processing_steps": [
+        "1. Reproject/align to canonical EPSG:32633 2 m grid (RBOA_20060408 as reference)",
+        "2. Hochberg (2003) glint correction on water pixels (NIR = band 4)",
+        "3. Dark Object Subtraction (2nd percentile per band over water pixels)",
+        "4. Cross-calibrate to RBOA_20060408 via linear regression on deep-water pseudo-invariant features (PIFs)",
+        "5. Apply canonical water mask wm_ALL_f; land = nodata = 0",
+        "6. Save 3-band RGB float32, nodata=0, LZW"
+      ],
+      "radiometric_independence_caveat": "Step 4 anchors the 2003 radiometry to the 2006 QuickBird scene via a linear deep-water PIF regression. The 2003 reflectance product is therefore NOT radiometrically independent of 2006. This must be disclosed in the manuscript Methods: each scene is still classified independently, but the 2003 historical baseline shares a radiometric reference with the 2006 control branch."
+    },
+    "bottom_of_atmosphere_inputs_2016_2023": {
+      "20160825_wv": {
+        "source": "${PROJECT_ROOT}/data/source/rboa_sea/wv02_20160825_mul_rboa_sea/wv02_20160825_mul_rboa_sea.img",
+        "source_band_order": [
+          "B",
+          "G",
+          "R",
+          "NIR"
+        ],
+        "common_grid": "EPSG:32633, 2 m",
+        "resampling": "bilinear",
+        "water_mask_applied": true,
+        "output_nodata": 0.0,
+        "cleaning_rules": {
+          "zero_treated_as_nodata": true,
+          "non_finite_to_nodata": true,
+          "abs_gt_10_to_nodata": true,
+          "lt_minus_0p2_to_nodata": true,
+          "gt_2_to_nodata": true
+        }
+      },
+      "20230812_pl": {
+        "source": "${PROJECT_ROOT}/data/source/rboa_sea/Nuova acquisizione_20230812_elaborati/Rho_BOA_20230812/Rho_BOA_20230812.tif",
+        "source_band_order": [
+          "B",
+          "G",
+          "R",
+          "NIR"
+        ],
+        "common_grid": "EPSG:32633, 2 m",
+        "resampling": "bilinear",
+        "water_mask_applied": true,
+        "output_nodata": 0.0,
+        "cleaning_rules": {
+          "zero_treated_as_nodata": true,
+          "non_finite_to_nodata": true,
+          "abs_gt_10_to_nodata": true,
+          "lt_minus_0p2_to_nodata": true,
+          "gt_2_to_nodata": true
+        }
+      }
+    },
+    "segformer": {
+      "architecture": "SegFormer mit_b2",
+      "pretraining": "imagenet",
+      "optimizer": "AdamW",
+      "learning_rate": 0.00012,
+      "weight_decay": 0.0001,
+      "loss": "dice:1.0,focal:1.0,lovasz:1.0",
+      "label_smoothing": 0.05,
+      "effective_batch": 16,
+      "epochs_max": 70,
+      "early_stopping_patience": 18,
+      "warmup_epochs": 5,
+      "scheduler": "cosine",
+      "gradient_clip": 1.0,
+      "mixed_precision": true,
+      "augmentation": false,
+      "boundary_weight_radius_px": 3,
+      "boundary_weight_factor": 3.0,
+      "temperature_scaling": true,
+      "temperature_objective": "LBFGS minimization of class-weighted binary cross-entropy on validation logits",
+      "hard_threshold_rule": "validation sweep after temperature scaling; maximize minimum class IoU",
+      "seeds": [
+        123,
+        231,
+        312,
+        423,
+        531
+      ]
+    },
+    "full_scene_inference": {
+      "window_px": 512,
+      "step_px": 256,
+      "blend": "full_hann",
+      "input_adapter": "rgb_imagenet",
+      "test_time_augmentation": false,
+      "postprocessing": "none",
+      "seed_thresholds": [
+        0.49,
+        0.58,
+        0.69,
+        0.57,
+        0.6
+      ],
+      "seed_temperatures": [
+        0.8162060976028442,
+        1.6973299980163574,
+        0.8442619442939758,
+        1.4989675283432007,
+        1.7941274642944336
+      ],
+      "threshold_selection_metric": "min_iou",
+      "final_probability": "arithmetic mean of five validation-temperature-scaled probability rasters",
+      "hard_mask": "per-pixel majority of five seed masks using their validation-selected thresholds"
+    },
+    "unet": {
+      "architecture": "U-Net with ResNet-34 encoder",
+      "pretraining": "ImageNet",
+      "recipe": "same optimizer/loss/schedule as SegFormer; batch 8 with two-step gradient accumulation"
+    },
+    "random_forest": {
+      "features": "B, G, R pixel values; no spatial features",
+      "trees": 400,
+      "max_depth": 20,
+      "min_samples_leaf": 2,
+      "train_pixels_per_class": 250000,
+      "validation_pixels_per_class": 150000
+    },
+    "sources": {
+      "primary_config_sha256": "32fa8c331649f59f85483c223853c451261d1d85fac2a3252fc60545396ccb50",
+      "seed_extension_sha256": "d23e87bf65e05021f223a4396d2c1223744bed08f4fbfe89137f09ecda7e5058",
+      "feature_manifest_sha256": {
+        "20030709_qb": "c52df3cc60e0a73e90f45ec1875be9957588172535791ab9e6054eaa41b70dba",
+        "20160825_wv": "89bdb577faa09ba32a307b86297904b3afa82cd9fdae4b5a24f1e0d1df83e51b",
+        "20230812_pl": "208fc36649241e4f514e8a9ae6c183e552abf0a31c8750861100a03492611655"
+      },
+      "quickbird_provenance_sha256": "b54883edab4746777bbd58e69c1e08beaf9eae1664f474eb14600590bbb5ffde",
+      "rboa_metadata_sha256": {
+        "20160825_wv": "f9950763e0cb4cfce672d7c0fbfac271abfc04125e266b5a0205a8ffc423ea69",
+        "20230812_pl": "12590fd4667f60c22a8b576689efa1bdc588743ca45a62c32d7339c9a8544cfc"
+      },
+      "baseline_manifest_sha256": "e5b6e624a2710619e790445457ac4b7b738327133a32eedae588f4e078a8e6a4",
+      "full_scene_manifest_sha256": "ced3f446636ca6aad053d0d439ecc3416de6ff4a2c0313956c33a4c7bd93c687",
+      "inference_summary_sha256": "58673ec9d846330a379d32abef9361a6fc098e5757d92fd66c1b955fa6a470c3",
+      "baseline_runs": 10
+    },
+    "not_recoverable_from_v3": [
+      "reference-mask interpreter identities and blinding protocol",
+      "a signed/immutable raw record for the claimed 10 August 2023 field survey",
+      "independent empirical co-registration RMSE for the three final acquisitions"
+    ]
+  },
+  "output_sha256": {
+    "ablation_m3_by_scene.csv": "4a393361fa1875fc118fd48b41cb0bdadc9a154cef6d0afe514f931f3594e5e6",
+    "ablation_m3_pairwise_bootstrap.csv": "6102df31e410c5b95fd977ef7f391ace29d2b49c470c96fd7231b2f83e98e1c8",
+    "ablation_pooled.csv": "5a44f9622299618b27cf3ff7b9db69583c9973e1735021d9476abad9cc45d4f3",
+    "ablation_scene_label_holdout.csv": "8265fbfd9214f150354a702c91e292e6f88abb4063c82cc369309c71cfb4ad28",
+    "calibration_all_seeds_heldout.csv": "09b2ed3d4845b3197e36fd0beb1f063903c19b93b17419296680400fc34d88e7",
+    "calibration_ensemble_heldout.csv": "47a8b3f194c99926f7484deaa99a5740525421a56ba67735c7255ca9a8fe4739",
+    "calibration_reliability_bins.csv": "031da5896de85d28e14a317d350b87841bb310faee6faff14aa0989df30e7f47",
+    "calibration_reliability_heldout.png": "87cdef7b3a60be57eccda7183fee5d93b2c05dd176705b3aae247fb4e56e82f3",
+    "calibration_spatial_bootstrap.csv": "34d19548c4a2eaf6f1519704da2116b95391044663523f5838ea752095d4a014",
+    "field_crosscheck_final_product.csv": "7abafc60e63327e953313ee11927e3f99d503770b406d23f428f026bcf3c1bfe",
+    "field_crosscheck_summary.csv": "ab5d96f9aabf3bd7bb9529232f2b3639af96627b6e6334bd4080543cd79b4c74",
+    "frozen_test_support.csv": "3f512427cdf6f14d24871bbba584aa3c609d3e8971d3a77c54e60d23cecbb545",
+    "MANUSCRIPT_READY_TEXT.md": "d08c58cb7b54ef9cfe918b4c03823114b39f58a44f4b1dea0b659c4420ed0408",
+    "methods_verified_parameters.json": "eac3754de3a9f86cbdff3504038db3e25df33f8fdd6db28a2b0b38af86c47563",
+    "patch_branch_counts.csv": "7c15e714e569db8405234d7f27ff5fa6afe8c56ae0e8db5eecb89083a8c517e9",
+    "patch_m3_by_scene.csv": "950ecc3e60f9cfde9e5cdbe9b52d587f42df8e8ec85a74d8037686a6f942122e",
+    "SCIENTIFIC_ALIGNMENT_V3.md": "e3bb8d9a7deb751f27e7a8aac5045757017feea52e85cd0a8398c06fa63a5108"
+  }
+}

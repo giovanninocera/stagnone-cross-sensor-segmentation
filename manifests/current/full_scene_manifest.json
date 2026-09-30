@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-07-04T11:09:16",
+  "experiment": "final_scene_ablation_031623_v3",
+  "model": "M3 SegFormer MiT-B2",
+  "seeds": [
+    123,
+    231,
+    312,
+    423,
+    531
+  ],
+  "scenes": [
+    "20030709_qb",
+    "20160825_wv",
+    "20230812_pl"
+  ],
+  "seam_ratio_limit": 1.25,
+  "qa": {
+    "20030709_qb": {
+      "valid_pixels": 8615906,
+      "mean_pveg": 0.6657885909080505,
+      "mean_seed_sd": 0.040789905935525894,
+      "vertical_seam": {
+        "seam_mean": 0.029430991038680077,
+        "control_mean": 0.027128055691719055,
+        "ratio": 1.0848913192749023
+      },
+      "horizontal_seam": {
+        "seam_mean": 0.030879752710461617,
+        "control_mean": 0.02795587107539177,
+        "ratio": 1.1045892238616943
+      },
+      "seed_probability_paths": [
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed123/prob_20030709_qb_w512_p128_thr0p49.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed231/prob_20030709_qb_w512_p128_thr0p58.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed312/prob_20030709_qb_w512_p128_thr0p69.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed423/prob_20030709_qb_w512_p128_thr0p57.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed531/prob_20030709_qb_w512_p128_thr0p6.tif"
+      ],
+      "seed_thresholds": [
+        0.49,
+        0.58,
+        0.69,
+        0.57,
+        0.6
+      ],
+      "seed_temperatures": [
+        0.8162060976028442,
+        1.6973299980163574,
+        0.8442619442939758,
+        1.4989675283432007,
+        1.7941274642944336
+      ]
+    },
+    "20160825_wv": {
+      "valid_pixels": 8615877,
+      "mean_pveg": 0.6201311349868774,
+      "mean_seed_sd": 0.04370296373963356,
+      "vertical_seam": {
+        "seam_mean": 0.02664400450885296,
+        "control_mean": 0.02706480585038662,
+        "ratio": 0.9844520688056946
+      },
+      "horizontal_seam": {
+        "seam_mean": 0.028330685570836067,
+        "control_mean": 0.028476500883698463,
+        "ratio": 0.994879424571991
+      },
+      "seed_probability_paths": [
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed123/prob_20160825_wv_w512_p128_thr0p49.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed231/prob_20160825_wv_w512_p128_thr0p58.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed312/prob_20160825_wv_w512_p128_thr0p69.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed423/prob_20160825_wv_w512_p128_thr0p57.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed531/prob_20160825_wv_w512_p128_thr0p6.tif"
+      ],
+      "seed_thresholds": [
+        0.49,
+        0.58,
+        0.69,
+        0.57,
+        0.6
+      ],
+      "seed_temperatures": [
+        0.8162060976028442,
+        1.6973299980163574,
+        0.8442619442939758,
+        1.4989675283432007,
+        1.7941274642944336
+      ]
+    },
+    "20230812_pl": {
+      "valid_pixels": 8615883,
+      "mean_pveg": 0.5556447505950928,
+      "mean_seed_sd": 0.03701892867684364,
+      "vertical_seam": {
+        "seam_mean": 0.02501673623919487,
+        "control_mean": 0.02670135535299778,
+        "ratio": 0.9369088411331177
+      },
+      "horizontal_seam": {
+        "seam_mean": 0.025465311482548714,
+        "control_mean": 0.027235716581344604,
+        "ratio": 0.9349969625473022
+      },
+      "seed_probability_paths": [
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed123/prob_20230812_pl_w512_p128_thr0p49.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed231/prob_20230812_pl_w512_p128_thr0p58.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed312/prob_20230812_pl_w512_p128_thr0p69.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed423/prob_20230812_pl_w512_p128_thr0p57.tif",
+        "${PROJECT_ROOT}/out/pred/final_scene_ablation_031623_v3_m3_full_hann/seed531/prob_20230812_pl_w512_p128_thr0p6.tif"
+      ],
+      "seed_thresholds": [
+        0.49,
+        0.58,
+        0.69,
+        0.57,
+        0.6
+      ],
+      "seed_temperatures": [
+        0.8162060976028442,
+        1.6973299980163574,
+        0.8442619442939758,
+        1.4989675283432007,
+        1.7941274642944336
+      ]
+    },
+    "common_support_pooled_min_iou": {
+      "mean": 0.9563630921955323,
+      "sd": 0.005666630089149206
+    }
+  },
+  "outputs": [
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/mean_pveg_20030709_qb.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/sd_pveg_20030709_qb.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/consensus_vegmask_20030709_qb.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/roughness_binned_20030709_qb.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/roughness_proxy_20030709_qb.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/mean_pveg_20160825_wv.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/sd_pveg_20160825_wv.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/consensus_vegmask_20160825_wv.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/roughness_binned_20160825_wv.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/roughness_proxy_20160825_wv.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/mean_pveg_20230812_pl.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/sd_pveg_20230812_pl.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/consensus_vegmask_20230812_pl.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/roughness_binned_20230812_pl.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/roughness_proxy_20230812_pl.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/calibration_metrics.csv",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/hard_vs_soft_cover.csv",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/sanity_pveg_distribution.csv"
+  ],
+  "published": true,
+  "publish_result": {
+    "local_backup": "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/backups/pre_m3_v3_20260704_110904",
+    "export_backup": "${LICENSED_EXPORT_ROOT}/backups/pre_m3_v3_probability_20260704_110904",
+    "published": [
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/mean_pveg_20030709_qb.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/mean_pveg_20030709_qb.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/sd_pveg_20030709_qb.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/sd_pveg_20030709_qb.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/consensus_vegmask_20030709_qb.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/consensus_vegmask_20030709_qb.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/roughness_binned_20030709_qb.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/roughness_binned_20030709_qb.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/roughness_proxy_20030709_qb.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/roughness_proxy_20030709_qb.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/mean_pveg_20160825_wv.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/mean_pveg_20160825_wv.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/sd_pveg_20160825_wv.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/sd_pveg_20160825_wv.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/consensus_vegmask_20160825_wv.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/consensus_vegmask_20160825_wv.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/roughness_binned_20160825_wv.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/roughness_binned_20160825_wv.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/roughness_proxy_20160825_wv.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/roughness_proxy_20160825_wv.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/mean_pveg_20230812_pl.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/mean_pveg_20230812_pl.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/sd_pveg_20230812_pl.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/sd_pveg_20230812_pl.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/consensus_vegmask_20230812_pl.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/consensus_vegmask_20230812_pl.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/roughness_binned_20230812_pl.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/roughness_binned_20230812_pl.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/roughness_proxy_20230812_pl.tif",
+      "${LICENSED_EXPORT_ROOT}/dati/roughness_proxy_20230812_pl.tif",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/calibration_metrics.csv",
+      "${LICENSED_EXPORT_ROOT}/dati/calibration_metrics.csv",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/hard_vs_soft_cover.csv",
+      "${LICENSED_EXPORT_ROOT}/dati/hard_vs_soft_cover.csv",
+      "${PROJECT_ROOT}/out/runs/analysis/power_v3/prob_roughness_proxy/sanity_pveg_distribution.csv",
+      "${LICENSED_EXPORT_ROOT}/dati/sanity_pveg_distribution.csv"
+    ]
+  }
+}

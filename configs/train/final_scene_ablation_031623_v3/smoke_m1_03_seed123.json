@@ -1,0 +1,52 @@
+{
+  "_comment": "One-epoch runtime smoke test; not a scientific result.",
+  "expected_runs": 1,
+  "stage2_epochs": 1,
+  "stage2_patience": 1,
+  "warmup_epochs": 5,
+  "scheduler": "cosine",
+  "num_workers": 2,
+  "grad_clip": 1.0,
+  "encoder_weights": "imagenet",
+  "input_adapter": "auto",
+  "augment": false,
+  "amp": true,
+  "use_temp_scaling": false,
+  "selection_metric_mode": "at_05",
+  "boundary_weight": true,
+  "boundary_radius": 3,
+  "boundary_factor": 3.0,
+  "continue_on_error": false,
+  "tile": 256,
+  "depth_aug_prob": 0.2,
+  "cutout_prob": 0.1,
+  "cache_ram": true,
+  "datasets": {
+    "FINALABL_M1_03": {
+      "patch_csv": "out\\patches\\patches_final_scene_ablation_031623_v3_m1_03.csv",
+      "h5_path": "out\\patches_bin\\STORE_final_scene_ablation_031623_v3_m1_03_st3b_t256.h5",
+      "suffix": "_st3b_final_scene_ablation_031623_v3_common",
+      "in_ch": 3
+    }
+  },
+  "runs": [
+    {
+      "arch": "segformer_hf",
+      "encoder": "mit_b2",
+      "lr": 0.00012,
+      "wd": 0.0001,
+      "loss_mix": "dice:1.0,focal:1.0,lovasz:1.0",
+      "label_smooth": 0.05,
+      "batch": 16,
+      "grad_accum_steps": 1,
+      "seed": 123,
+      "thr_metric": "min_iou",
+      "augment": false,
+      "aug_profile": "default",
+      "use_temp_scaling": false
+    }
+  ],
+  "_comment_newboa_rgb_01_02": "New BOA-water aligned RGB-only rerun. Branch feature stacks are generated from data/rboa with train-only normalization fitted on each branch split plan.",
+  "eval_batch": 16,
+  "_canonical_recipe_newboa_rgb_01_02": "Controlled rerun: all branches use SegFormer MiT-B2, RGB-only input, train-only normalization, balanced spatial block split, and the same loss/optimizer recipe."
+}

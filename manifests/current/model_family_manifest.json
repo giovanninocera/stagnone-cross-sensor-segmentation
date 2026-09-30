@@ -1,0 +1,23 @@
+{
+  "experiment": "final_model_family_v3",
+  "models": [
+    "segformer",
+    "unet",
+    "rf"
+  ],
+  "seeds": [
+    123,
+    231,
+    312,
+    423,
+    531
+  ],
+  "metrics_input": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/model_family/all_model_family_metrics.csv",
+  "cells_input": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/model_family/all_model_family_cells.csv",
+  "summary": "${PROJECT_ROOT}/out/runs/analysis/paper_v2_final/model_family/model_family_summary.csv",
+  "bootstrap": "${PROJECT_ROOT}/out/runs/analysis/paper_v2_final/model_family/model_family_bootstrap.csv",
+  "figure": "${PROJECT_ROOT}/out/runs/analysis/paper_v2_final/model_family/fig_model_family_comparison.png",
+  "report": "${PROJECT_ROOT}/out/runs/analysis/paper_v2_final/model_family/MODEL_FAMILY_REPORT.md",
+  "bootstrap_draws": 5000,
+  "random_seed": 20260704
+}

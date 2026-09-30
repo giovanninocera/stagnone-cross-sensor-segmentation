@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or the distributed aggregate results, please cite this repository and the associated article."
+type: software
+title: "Stagnone cross-sensor submerged-vegetation segmentation"
+version: "1.0.0"
+date-released: "2026-09-30"
+repository-code: "https://github.com/giovanninocera/stagnone-cross-sensor-segmentation"
+license: MIT
+authors:
+  - family-names: Nocera
+    given-names: Giovanni Andrea
+    affiliation: University of Palermo
+  - family-names: Mederos-Barrera
+    given-names: Antonio
+    affiliation: University of Las Palmas de Gran Canaria
+  - family-names: Rodríguez-Esparragón
+    given-names: Dionisio
+    affiliation: University of Las Palmas de Gran Canaria
+  - family-names: Ciraolo
+    given-names: Giuseppe
+    affiliation: University of Palermo
+  - family-names: Maltese
+    given-names: Antonino
+    affiliation: University of Palermo
+keywords:
+  - remote sensing
+  - submerged vegetation
+  - seagrass mapping
+  - semantic segmentation
+  - SegFormer
+  - cross-sensor domain shift
+  - spatial validation

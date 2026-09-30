@@ -1,0 +1,26 @@
+{
+  "experiment": "final_scene_ablation_031623_v3",
+  "branches": [
+    "M1_03",
+    "M1_16",
+    "M1_23",
+    "M2_0316",
+    "M2_0323",
+    "M2_1623",
+    "M3_031623"
+  ],
+  "seeds": [
+    123,
+    231,
+    312,
+    423,
+    531
+  ],
+  "metrics_input": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/common_support/all_segformer_metrics.csv",
+  "cells_input": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/common_support/all_segformer_cells.csv",
+  "seed_summary": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/common_support/segformer_five_seed_summary.csv",
+  "paired_spatial_bootstrap": "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/common_support/segformer_paired_spatial_bootstrap.csv",
+  "bootstrap_draws": 5000,
+  "random_seed": 20260703,
+  "bootstrap_design": "paired hierarchical resampling: five seeds with replacement; spatial 256-pixel cells with replacement within each scene"
+}

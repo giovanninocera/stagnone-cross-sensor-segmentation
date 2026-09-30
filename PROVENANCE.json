@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/giovanninocera/stagnone-cross-sensor-segmentation",
+  "release_version": "1.0.0",
+  "public_release_date": "2026-09-30",
+  "source_bundle": "Supplementary_Data_S1_Reproducibility.zip",
+  "source_bundle_sha256": "93c93e551d2bd3d01a2b92fdc9b2a1941d011e755c7ab09f9a559705268bfda7",
+  "source_state_captured_utc": "2026-07-16T17:16:29Z",
+  "internal_source_git_head": "c419ce59940e83b61ff329625c2771048daa2759",
+  "manuscript_checked": "paper_StagnoneSegformer_0922.docx",
+  "manuscript_sha256": "05f7f0e252714571630155d81a1cf89a4e3db008c638b86b2be32b44d61035ff",
+  "authoritative_release": "final_scene_ablation_031623_v3_hybrid",
+  "authoritative_freeze_date": "2026-07-16",
+  "authoritative_selected_objects": 598,
+  "authoritative_selected_area_ha": 48.9456,
+  "commercial_pixel_content_included": false,
+  "coordinate_bearing_geodata_included": false,
+  "absolute_paths_sanitized": true,
+  "portable_reproduction_scope": "consolidated numerical summary from aggregate tables",
+  "full_image_level_reproduction_supported": false
+}

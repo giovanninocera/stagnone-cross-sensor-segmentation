@@ -1,0 +1,415 @@
+{
+  "timestamp": "2026-07-16T19:24:59",
+  "release": "final_scene_ablation_031623_v3_hybrid",
+  "fixed_seeds": [
+    123,
+    231,
+    312,
+    423,
+    531
+  ],
+  "claims": {
+    "model_family": {
+      "segformer": {
+        "n_seeds": 5,
+        "min_iou_mean": 0.9563630921955324,
+        "min_iou_sd": 0.0056666300891492,
+        "iou_veg_mean": 0.9754143341392452,
+        "iou_nonveg_mean": 0.9563630921955324,
+        "mcc_mean": 0.9652883311920164,
+        "ece_15_mean": 0.011423570741067
+      },
+      "unet": {
+        "n_seeds": 5,
+        "min_iou_mean": 0.8777431807165597,
+        "min_iou_sd": 0.0284889099274164,
+        "iou_veg_mean": 0.9237802836425888,
+        "iou_nonveg_mean": 0.8777431807165597,
+        "mcc_mean": 0.8977457128752373,
+        "ece_15_mean": 0.018633832408943
+      },
+      "rf": {
+        "n_seeds": 5,
+        "min_iou_mean": 0.7475495838357309,
+        "min_iou_sd": 0.1088233740374772,
+        "iou_veg_mean": 0.8186538478462904,
+        "iou_nonveg_mean": 0.7475495838357309,
+        "mcc_mean": 0.7662794983716907,
+        "ece_15_mean": 0.0692703148681338
+      },
+      "paired_bootstrap": {
+        "unet": {
+          "delta_min_iou_mean": 0.07955951949164,
+          "ci95_low": 0.0518191115123862,
+          "ci95_high": 0.1116315159124887,
+          "probability_positive": 1.0
+        },
+        "rf": {
+          "delta_min_iou_mean": 0.2105251843946154,
+          "ci95_low": 0.1220940445794025,
+          "ci95_high": 0.3108162965520284,
+          "probability_positive": 1.0
+        }
+      }
+    },
+    "full_scene_cover": {
+      "20030709_qb": {
+        "label": "QB 2003",
+        "valid_pixels": 8615906,
+        "hard_operational_cover_pct": 65.8288,
+        "hard_seed_sd_pct": 0.7331,
+        "soft_cover_pct": 66.5789,
+        "thresholds": [
+          0.49,
+          0.58,
+          0.69,
+          0.57,
+          0.6
+        ],
+        "temperatures": [
+          0.816,
+          1.697,
+          0.844,
+          1.499,
+          1.794
+        ]
+      },
+      "20160825_wv": {
+        "label": "WV2 2016",
+        "valid_pixels": 8615877,
+        "hard_operational_cover_pct": 61.0488,
+        "hard_seed_sd_pct": 1.1533,
+        "soft_cover_pct": 62.0131,
+        "thresholds": [
+          0.49,
+          0.58,
+          0.69,
+          0.57,
+          0.6
+        ],
+        "temperatures": [
+          0.816,
+          1.697,
+          0.844,
+          1.499,
+          1.794
+        ]
+      },
+      "20230812_pl": {
+        "label": "PL 2023",
+        "valid_pixels": 8615883,
+        "hard_operational_cover_pct": 54.3816,
+        "hard_seed_sd_pct": 0.6776,
+        "soft_cover_pct": 55.5645,
+        "thresholds": [
+          0.49,
+          0.58,
+          0.69,
+          0.57,
+          0.6
+        ],
+        "temperatures": [
+          0.816,
+          1.697,
+          0.844,
+          1.499,
+          1.794
+        ]
+      }
+    },
+    "cross_scene_ablation": {
+      "2003": {
+        "excluded_branch": "M2_1623",
+        "excluded_min_iou_mean": 0.6270151266803339,
+        "excluded_min_iou_sd": 0.0350811902902799,
+        "m3_min_iou_mean": 0.9533195724250504,
+        "m3_min_iou_sd": 0.0178989225515473
+      },
+      "2016": {
+        "excluded_branch": "M2_0323",
+        "excluded_min_iou_mean": 0.8165780918867718,
+        "excluded_min_iou_sd": 0.1025285471560763,
+        "m3_min_iou_mean": 0.9403976310910775,
+        "m3_min_iou_sd": 0.0068205201852572
+      },
+      "2023": {
+        "excluded_branch": "M2_0316",
+        "excluded_min_iou_mean": 0.7121173031734066,
+        "excluded_min_iou_sd": 0.0976156407925156,
+        "m3_min_iou_mean": 0.971503938046334,
+        "m3_min_iou_sd": 0.0071893548474569
+      },
+      "effect_2003": {
+        "delta_min_iou_mean": 0.332935710522969,
+        "delta_min_iou_ci95_low": 0.263956011863746,
+        "delta_min_iou_ci95_high": 0.405540381888699,
+        "probability_positive": 1.0
+      }
+    },
+    "scene_matrix": {
+      "branches": {
+        "M1_03": {
+          "pooled_min_iou_mean": 0.5037968329060203,
+          "pooled_min_iou_sd": 0.0307813061311626,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.96242919014132,
+              "min_iou_sd": 0.02042375462055
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.2696690895146046,
+              "min_iou_sd": 0.1121706079136428
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.2914198071601984,
+              "min_iou_sd": 0.0678017657961504
+            }
+          }
+        },
+        "M1_16": {
+          "pooled_min_iou_mean": 0.7779489163500084,
+          "pooled_min_iou_sd": 0.019553412024919,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.5594611721702151,
+              "min_iou_sd": 0.050475412626882
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.940373813005337,
+              "min_iou_sd": 0.018137545154042
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.9024918374960382,
+              "min_iou_sd": 0.0276902757328212
+            }
+          }
+        },
+        "M1_23": {
+          "pooled_min_iou_mean": 0.8784589549551487,
+          "pooled_min_iou_sd": 0.0066200552558444,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.8070724085078806,
+              "min_iou_sd": 0.0296210540253651
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.8277185378735279,
+              "min_iou_sd": 0.0210753848804824
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.977707033703927,
+              "min_iou_sd": 0.0077824139032115
+            }
+          }
+        },
+        "M2_0316": {
+          "pooled_min_iou_mean": 0.8330728712671304,
+          "pooled_min_iou_sd": 0.0494670631215406,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.942348598494954,
+              "min_iou_sd": 0.0182698697861805
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.9292299343122083,
+              "min_iou_sd": 0.0369384934878458
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.7121173031734066,
+              "min_iou_sd": 0.0976156407925156
+            }
+          }
+        },
+        "M2_0323": {
+          "pooled_min_iou_mean": 0.8967736891086033,
+          "pooled_min_iou_sd": 0.059045443684059,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.942645437506048,
+              "min_iou_sd": 0.047864908986362
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.8165780918867718,
+              "min_iou_sd": 0.1025285471560763
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.9373928160431112,
+              "min_iou_sd": 0.04519658519147
+            }
+          }
+        },
+        "M2_1623": {
+          "pooled_min_iou_mean": 0.8325156013357662,
+          "pooled_min_iou_sd": 0.0171236947162285,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.6270151266803339,
+              "min_iou_sd": 0.0350811902902799
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.937501615066257,
+              "min_iou_sd": 0.0071309231313373
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.9667892622280366,
+              "min_iou_sd": 0.0077193053217742
+            }
+          }
+        },
+        "M3_031623": {
+          "pooled_min_iou_mean": 0.9563630921955324,
+          "pooled_min_iou_sd": 0.0056666300891492,
+          "per_scene": {
+            "20030709_qb": {
+              "min_iou_mean": 0.9533195724250504,
+              "min_iou_sd": 0.0178989225515473
+            },
+            "20160825_wv": {
+              "min_iou_mean": 0.9403976310910775,
+              "min_iou_sd": 0.0068205201852572
+            },
+            "20230812_pl": {
+              "min_iou_mean": 0.971503938046334,
+              "min_iou_sd": 0.0071893548474569
+            }
+          }
+        }
+      },
+      "m3_pairwise_pooled": {
+        "M1_03": {
+          "delta_min_iou_mean": 0.4566714577852804,
+          "ci95_low": 0.4044058461629229,
+          "ci95_high": 0.5077168703321888,
+          "probability_positive": 1.0
+        },
+        "M1_16": {
+          "delta_min_iou_mean": 0.1801543095714224,
+          "ci95_low": 0.1484815259470772,
+          "ci95_high": 0.2174020396704394,
+          "probability_positive": 1.0
+        },
+        "M1_23": {
+          "delta_min_iou_mean": 0.078700893462569,
+          "ci95_low": 0.0628423600240906,
+          "ci95_high": 0.0965279177836799,
+          "probability_positive": 1.0
+        },
+        "M2_0316": {
+          "delta_min_iou_mean": 0.12319541011388,
+          "ci95_low": 0.0700193959376868,
+          "ci95_high": 0.1787939968288334,
+          "probability_positive": 1.0
+        },
+        "M2_0323": {
+          "delta_min_iou_mean": 0.0601567447692385,
+          "ci95_low": 0.0231662661233051,
+          "ci95_high": 0.1187406644024816,
+          "probability_positive": 1.0
+        },
+        "M2_1623": {
+          "delta_min_iou_mean": 0.1250849551518493,
+          "ci95_low": 0.1004723250861908,
+          "ci95_high": 0.1520306298029008,
+          "probability_positive": 1.0
+        }
+      },
+      "best_m1": "M1_23",
+      "best_m2": "M2_0323"
+    },
+    "structural_support": {
+      "mapped_objects_2003": 1011,
+      "mapped_area_2003_ha": 76.5404,
+      "selected_objects_2023": 598,
+      "selected_area_2023_ha": 48.9456,
+      "selected_vegetated_endpoint": 202,
+      "selected_bare_endpoint": 396,
+      "primary_gate": "14/17",
+      "direction_vector_normalization": "euclidean_unit",
+      "paper_facing_output_rule": "vegetation likelihood and structural support are separate layers"
+    },
+    "structural_support_diagnostics": {
+      "status": "diagnostic only; excluded from paper-facing structural maps; not a calibrated hydraulic coefficient",
+      "paper_facing": false,
+      "paper_facing_layers": [
+        "five-seed mean P(VEG)",
+        "selected structural footprint IDs"
+      ],
+      "continuous_rule": "diagnostic-only composite: five-seed mean P(VEG) outside mapped or selected footprints; footprint pixels equal 1.0",
+      "continuous_summary": {
+        "2003": {
+          "structural_area_ha": 76.5404,
+          "mean_index": 0.670007
+        },
+        "2023": {
+          "structural_area_ha": 48.9456,
+          "mean_index": 0.56477
+        }
+      },
+      "rings": {
+        "excluded_immediate_edge_m": [
+          0,
+          4
+        ],
+        "inner_context_m": [
+          4,
+          12
+        ],
+        "outer_context_m": [
+          12,
+          24
+        ],
+        "core_pixels_excluded_from_rings": true
+      }
+    }
+  },
+  "source_files": {
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v2_final/model_family/model_family_summary.csv": {
+      "sha256": "91fd332b932895eb9752231c988945fe494ab326f9c4b18e895dec8c421fbc12",
+      "bytes": 12315
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v2_final/model_family/model_family_bootstrap.csv": {
+      "sha256": "4f573d0bd260919c9b5261cf0eb7af72ed64160dd06382b42009fbf210653c5e",
+      "bytes": 3765
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/hard_vs_soft_cover.csv": {
+      "sha256": "9376acc1305ce3d1f04efec7169968c8e14137d0730a7682aae747a5109e2a39",
+      "bytes": 564
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/cross_scene_domain_ablation.csv": {
+      "sha256": "0fa626831ab4ae783d079ede19c4e2dc4ab20c35b30ef694cb96159d95cdb59b",
+      "bytes": 890
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/cross_scene_2003_manifest.json": {
+      "sha256": "2c3be90bef6b360d03705a7994b468d33c9f12a39174b74a1d0e99fc1c250ed4",
+      "bytes": 1464
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/full_scene_manifest.json": {
+      "sha256": "ced3f446636ca6aad053d0d439ecc3416de6ff4a2c0313956c33a4c7bd93c687",
+      "bytes": 10394
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/hybrid_summary.json": {
+      "sha256": "b40a7d3915b13701a6687aa45329dec31ce57eb4f1de544ed040d6abf4909bf6",
+      "bytes": 13059
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/structural_selection_manifest.json": {
+      "sha256": "8306c35a9e51f5f1130ad243595e6dd0ae82b6c5ba864500cf376c66b0e27b62",
+      "bytes": 2589
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/figures/structural_figure_manifest.json": {
+      "sha256": "9c772e748843bdb0e5ef7b0aa44a7ac9df534f3a83036f6f72faa7719fd41b68",
+      "bytes": 1722
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/paper_v3_hybrid/review_products/structural_diagnostic_manifest.json": {
+      "sha256": "3bb0ec31e3ef3a138f4673862c8e5da05d76791f74e44776488718c3cbba7745",
+      "bytes": 2645
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/common_support/segformer_five_seed_summary.csv": {
+      "sha256": "6a71c8141d7b3091dac2941509ab5f30a39253b9b0cc08e360ed856f24b865de",
+      "bytes": 27659
+    },
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/common_support/segformer_paired_spatial_bootstrap.csv": {
+      "sha256": "9ef59abd01116db397607d379d12c9cdb404eef9faad1fe1b8e9a6bf0163228b",
+      "bytes": 10443
+    }
+  }
+}

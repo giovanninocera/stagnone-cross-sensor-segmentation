@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Licensed or non-public research inputs at the repository root
+/data/
+/inputs/
+/checkpoints/
+/models/
+/outputs/
+*.tif
+*.tiff
+*.img
+*.jp2
+*.vrt
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+*.shp
+*.shx
+*.dbf
+*.gpkg
+*.geojson
+*.qgz
+*.qgs
+*.docx
+*.pdf
+*.pptx

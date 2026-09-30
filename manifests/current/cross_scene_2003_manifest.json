@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-07-16T19:12:47",
+  "experiment": "final_scene_ablation_031623_v3",
+  "comparison": "M2_1623 target-normalized omitted-scene 2003 diagnostic versus M3_031623 spatial holdout",
+  "seeds": [
+    123,
+    231,
+    312,
+    423,
+    531
+  ],
+  "zoom_pixels": [
+    606,
+    1506,
+    1374,
+    2274
+  ],
+  "effect_2003": {
+    "delta_min_iou_mean": 0.332935710522969,
+    "delta_min_iou_ci95_low": 0.263956011863746,
+    "delta_min_iou_ci95_high": 0.405540381888699,
+    "probability_positive": 1.0
+  },
+  "outputs": [
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/mean_pveg_m2_1623_on_2003.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/sd_pveg_m2_1623_on_2003.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/mean_pveg_difference_m3_minus_m2_2003.tif",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/cross_scene_domain_ablation.csv",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/fig_cross_scene_2003_m2_vs_m3.png",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/fig_cross_scene_2003_m2_vs_m3.pdf",
+    "${PROJECT_ROOT}/out/runs/analysis/final_scene_ablation_031623_v3/cross_scene_2003/CROSS_SCENE_2003_REPORT.md"
+  ],
+  "published": []
+}

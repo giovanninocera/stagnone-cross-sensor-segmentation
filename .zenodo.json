@@ -1,0 +1,40 @@
+{
+  "title": "Stagnone cross-sensor submerged-vegetation segmentation",
+  "upload_type": "software",
+  "description": "Code, frozen configurations, aggregate numerical results, and provenance manifests supporting a leakage-controlled cross-sensor comparison of submerged-vegetation mapping models in the Stagnone di Marsala lagoon. Commercial source imagery and coordinate-bearing geospatial products are excluded.",
+  "creators": [
+    {
+      "name": "Nocera, Giovanni Andrea",
+      "affiliation": "University of Palermo; National Biodiversity Future Center (NBFC)"
+    },
+    {
+      "name": "Mederos-Barrera, Antonio",
+      "affiliation": "University of Las Palmas de Gran Canaria"
+    },
+    {
+      "name": "Rodríguez-Esparragón, Dionisio",
+      "affiliation": "University of Las Palmas de Gran Canaria"
+    },
+    {
+      "name": "Ciraolo, Giuseppe",
+      "affiliation": "University of Palermo"
+    },
+    {
+      "name": "Maltese, Antonino",
+      "affiliation": "University of Palermo"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "version": "1.0.0",
+  "publication_date": "2026-09-30",
+  "keywords": [
+    "remote sensing",
+    "submerged vegetation",
+    "seagrass mapping",
+    "semantic segmentation",
+    "SegFormer",
+    "cross-sensor domain shift",
+    "spatial validation"
+  ]
+}

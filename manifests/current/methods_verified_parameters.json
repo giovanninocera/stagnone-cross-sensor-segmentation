@@ -1,0 +1,223 @@
+{
+  "inputs": {
+    "channels": [
+      "B",
+      "G",
+      "R"
+    ],
+    "grid": "EPSG:32633, 2 m sampling grid",
+    "normalization": "per-scene 2nd-98th percentile scaling fitted on valid, label-agnostic image pixels in the union of fixed training-split windows",
+    "normalization_by_scene": {
+      "20030709_qb": {
+        "fit_pixels": 5710545,
+        "training_window_rows": 3136,
+        "fallback_to_all_valid": false,
+        "percentile_low": 2.0,
+        "percentile_high": 98.0,
+        "rgb_clip_values": {
+          "B": {
+            "lo": 0.05004444718360901,
+            "hi": 0.06288173675537109
+          },
+          "G": {
+            "lo": 0.023909512907266617,
+            "hi": 0.05385975956916815
+          },
+          "R": {
+            "lo": 0.015353966504335403,
+            "hi": 0.0385750712454319
+          }
+        }
+      },
+      "20160825_wv": {
+        "fit_pixels": 5710524,
+        "training_window_rows": 3136,
+        "fallback_to_all_valid": false,
+        "percentile_low": 2.0,
+        "percentile_high": 98.0,
+        "rgb_clip_values": {
+          "B": {
+            "lo": 0.20941947400569916,
+            "hi": 0.23768281936645508
+          },
+          "G": {
+            "lo": 0.10683518648147583,
+            "hi": 0.1478179693222046
+          },
+          "R": {
+            "lo": 0.05663628131151199,
+            "hi": 0.09287998080253601
+          }
+        }
+      },
+      "20230812_pl": {
+        "fit_pixels": 5710529,
+        "training_window_rows": 3136,
+        "fallback_to_all_valid": false,
+        "percentile_low": 2.0,
+        "percentile_high": 98.0,
+        "rgb_clip_values": {
+          "B": {
+            "lo": 0.016018107533454895,
+            "hi": 0.041638072580099106
+          },
+          "G": {
+            "lo": 0.008771264925599098,
+            "hi": 0.04533086717128754
+          },
+          "R": {
+            "lo": 0.00175531767308712,
+            "hi": 0.03988591954112053
+          }
+        }
+      }
+    },
+    "normalization_scope_caveat": "target-scene radiometry is used for label-independent normalization in scene-exclusion branches"
+  },
+  "quickbird_2003": {
+    "acquisition_date": "2003-07-07",
+    "legacy_scene_identifier": "20030709_qb",
+    "raw_source": "reflectance_rhoTOA_07072003.tif",
+    "processing_steps": [
+      "1. Reproject/align to canonical EPSG:32633 2 m grid (RBOA_20060408 as reference)",
+      "2. Hochberg (2003) glint correction on water pixels (NIR = band 4)",
+      "3. Dark Object Subtraction (2nd percentile per band over water pixels)",
+      "4. Cross-calibrate to RBOA_20060408 via linear regression on deep-water pseudo-invariant features (PIFs)",
+      "5. Apply canonical water mask wm_ALL_f; land = nodata = 0",
+      "6. Save 3-band RGB float32, nodata=0, LZW"
+    ],
+    "radiometric_independence_caveat": "Step 4 anchors the 2003 radiometry to the 2006 QuickBird scene via a linear deep-water PIF regression. The 2003 reflectance product is therefore NOT radiometrically independent of 2006. This must be disclosed in the manuscript Methods: each scene is still classified independently, but the 2003 historical baseline shares a radiometric reference with the 2006 control branch."
+  },
+  "bottom_of_atmosphere_inputs_2016_2023": {
+    "20160825_wv": {
+      "source": "${PROJECT_ROOT}/data/source/rboa_sea/wv02_20160825_mul_rboa_sea/wv02_20160825_mul_rboa_sea.img",
+      "source_band_order": [
+        "B",
+        "G",
+        "R",
+        "NIR"
+      ],
+      "common_grid": "EPSG:32633, 2 m",
+      "resampling": "bilinear",
+      "water_mask_applied": true,
+      "output_nodata": 0.0,
+      "cleaning_rules": {
+        "zero_treated_as_nodata": true,
+        "non_finite_to_nodata": true,
+        "abs_gt_10_to_nodata": true,
+        "lt_minus_0p2_to_nodata": true,
+        "gt_2_to_nodata": true
+      }
+    },
+    "20230812_pl": {
+      "source": "${PROJECT_ROOT}/data/source/rboa_sea/Nuova acquisizione_20230812_elaborati/Rho_BOA_20230812/Rho_BOA_20230812.tif",
+      "source_band_order": [
+        "B",
+        "G",
+        "R",
+        "NIR"
+      ],
+      "common_grid": "EPSG:32633, 2 m",
+      "resampling": "bilinear",
+      "water_mask_applied": true,
+      "output_nodata": 0.0,
+      "cleaning_rules": {
+        "zero_treated_as_nodata": true,
+        "non_finite_to_nodata": true,
+        "abs_gt_10_to_nodata": true,
+        "lt_minus_0p2_to_nodata": true,
+        "gt_2_to_nodata": true
+      }
+    }
+  },
+  "segformer": {
+    "architecture": "SegFormer mit_b2",
+    "pretraining": "imagenet",
+    "optimizer": "AdamW",
+    "learning_rate": 0.00012,
+    "weight_decay": 0.0001,
+    "loss": "dice:1.0,focal:1.0,lovasz:1.0",
+    "label_smoothing": 0.05,
+    "effective_batch": 16,
+    "epochs_max": 70,
+    "early_stopping_patience": 18,
+    "warmup_epochs": 5,
+    "scheduler": "cosine",
+    "gradient_clip": 1.0,
+    "mixed_precision": true,
+    "augmentation": false,
+    "boundary_weight_radius_px": 3,
+    "boundary_weight_factor": 3.0,
+    "temperature_scaling": true,
+    "temperature_objective": "LBFGS minimization of class-weighted binary cross-entropy on validation logits",
+    "hard_threshold_rule": "validation sweep after temperature scaling; maximize minimum class IoU",
+    "seeds": [
+      123,
+      231,
+      312,
+      423,
+      531
+    ]
+  },
+  "full_scene_inference": {
+    "window_px": 512,
+    "step_px": 256,
+    "blend": "full_hann",
+    "input_adapter": "rgb_imagenet",
+    "test_time_augmentation": false,
+    "postprocessing": "none",
+    "seed_thresholds": [
+      0.49,
+      0.58,
+      0.69,
+      0.57,
+      0.6
+    ],
+    "seed_temperatures": [
+      0.8162060976028442,
+      1.6973299980163574,
+      0.8442619442939758,
+      1.4989675283432007,
+      1.7941274642944336
+    ],
+    "threshold_selection_metric": "min_iou",
+    "final_probability": "arithmetic mean of five validation-temperature-scaled probability rasters",
+    "hard_mask": "per-pixel majority of five seed masks using their validation-selected thresholds"
+  },
+  "unet": {
+    "architecture": "U-Net with ResNet-34 encoder",
+    "pretraining": "ImageNet",
+    "recipe": "same optimizer/loss/schedule as SegFormer; batch 8 with two-step gradient accumulation"
+  },
+  "random_forest": {
+    "features": "B, G, R pixel values; no spatial features",
+    "trees": 400,
+    "max_depth": 20,
+    "min_samples_leaf": 2,
+    "train_pixels_per_class": 250000,
+    "validation_pixels_per_class": 150000
+  },
+  "sources": {
+    "primary_config_sha256": "32fa8c331649f59f85483c223853c451261d1d85fac2a3252fc60545396ccb50",
+    "seed_extension_sha256": "d23e87bf65e05021f223a4396d2c1223744bed08f4fbfe89137f09ecda7e5058",
+    "feature_manifest_sha256": {
+      "20030709_qb": "c52df3cc60e0a73e90f45ec1875be9957588172535791ab9e6054eaa41b70dba",
+      "20160825_wv": "89bdb577faa09ba32a307b86297904b3afa82cd9fdae4b5a24f1e0d1df83e51b",
+      "20230812_pl": "208fc36649241e4f514e8a9ae6c183e552abf0a31c8750861100a03492611655"
+    },
+    "quickbird_provenance_sha256": "b54883edab4746777bbd58e69c1e08beaf9eae1664f474eb14600590bbb5ffde",
+    "rboa_metadata_sha256": {
+      "20160825_wv": "f9950763e0cb4cfce672d7c0fbfac271abfc04125e266b5a0205a8ffc423ea69",
+      "20230812_pl": "12590fd4667f60c22a8b576689efa1bdc588743ca45a62c32d7339c9a8544cfc"
+    },
+    "baseline_manifest_sha256": "e5b6e624a2710619e790445457ac4b7b738327133a32eedae588f4e078a8e6a4",
+    "full_scene_manifest_sha256": "ced3f446636ca6aad053d0d439ecc3416de6ff4a2c0313956c33a4c7bd93c687",
+    "inference_summary_sha256": "58673ec9d846330a379d32abef9361a6fc098e5757d92fd66c1b955fa6a470c3",
+    "baseline_runs": 10
+  },
+  "not_recoverable_from_v3": [
+    "reference-mask interpreter identities and blinding protocol",
+    "a signed/immutable raw record for the claimed 10 August 2023 field survey",
+    "independent empirical co-registration RMSE for the three final acquisitions"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "inputs": {
+    "core_ids": "${LICENSED_EXPORT_ROOT}/dati/atolli_spettrali/expanded_spectral_2003/atolls_cordons_trace_objects_2003.tif",
+    "footprint_ids": "${LICENSED_EXPORT_ROOT}/dati/atolli_spettrali/expanded_spectral_2003/atolls_cordons_expanded_spectral_2003.tif",
+    "water": "data/geom/wm_ALL_f.tif",
+    "rboa_2003": "data/rboa/RBOA_20030709.tif",
+    "rboa_2023": "data/rboa/RBOA_20230812.tif",
+    "pveg_2003": "out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/mean_pveg_20030709_qb.tif",
+    "pveg_2023": "out/runs/analysis/final_scene_ablation_031623_v3/full_scene_products/mean_pveg_20230812_pl.tif"
+  },
+  "classification": {
+    "collapse_ratio": 0.6,
+    "minimum_collapsed_signals": 2,
+    "endpoint_pveg_threshold": 0.5,
+    "retained_bare_minimum_pveg_decline": 0.15,
+    "retained_vegetated_minimum_modern_c1": 0.5
+  },
+  "coregistration": {
+    "primary_shift_magnitudes_m": [
+      1.0,
+      2.0
+    ],
+    "stress_shift_magnitudes_m": [
+      4.0
+    ],
+    "required_primary_fraction": 0.8,
+    "sensitivity_fractions": [
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "direction_vector_normalization": "euclidean_unit"
+  },
+  "diagnostic_bins": {
+    "low_upper_probability": 0.3333333333333333,
+    "medium_upper_probability": 0.6666666666666666
+  }
+}

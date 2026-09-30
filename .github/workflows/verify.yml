@@ -1,0 +1,21 @@
+name: Release verification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify checksums, disclosure boundary, and summary
+        run: python scripts/verify_release.py
+      - name: Compile Python sources
+        run: python -m compileall -q scripts

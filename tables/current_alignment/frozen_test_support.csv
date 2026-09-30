@@ -1,0 +1,2 @@
+windows_total,windows_per_scene,unique_pixels_total,unique_pixels_2003,unique_pixels_2016,unique_pixels_2023,validation_blocks,test_blocks,reciprocal_buffer_px,reciprocal_buffer_m,train_validation_rows_checked,overlap_pairs,manifest_sha256
+207,69,2005445,768261,541175,696009,6|24|28|30,15|18|19|22,256,512,29752,0,083d75e8a34f248cab639e90584196b52a9cce6bffe1c7185dc5b18dbfd3d84e
